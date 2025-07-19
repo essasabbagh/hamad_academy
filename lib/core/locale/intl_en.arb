@@ -108,9 +108,13 @@
   "sessionsCompleted": "{count, plural, one {Session} other {Sessions}}",
   "courseDetails": "Course details",
   "joinNow": "Join now",
+<<<<<<< HEAD
   "reschedule": "Reschedule",
   "math": "Math",
   "seeMore": "See More",
   "showAll": "Show All",
   "sources": "Sources"
+=======
+  "reschedule": "Reschedule"
+>>>>>>> 3ecac7f (first commit)
 }

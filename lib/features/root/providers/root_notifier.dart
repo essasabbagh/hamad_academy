@@ -7,7 +7,11 @@ import 'package:hamad/core/router/go_router_extension.dart';
 // Define a mapping between AppRoutes enum values and tab indices
 final Map<AppRoutes, int> routeToIndexMap = {
   AppRoutes.home: 0,
+<<<<<<< HEAD
   AppRoutes.studentCourses: 1,
+=======
+  AppRoutes.courses: 1,
+>>>>>>> 3ecac7f (first commit)
   AppRoutes.search: 2,
   AppRoutes.notifications: 3,
   AppRoutes.profile: 4,

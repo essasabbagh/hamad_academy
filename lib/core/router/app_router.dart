@@ -5,7 +5,10 @@ import 'package:go_transitions/go_transitions.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import 'package:hamad/core/data/storage_service.dart';
+<<<<<<< HEAD
 import 'package:hamad/core/enums/roles.dart';
+=======
+>>>>>>> 3ecac7f (first commit)
 import 'package:hamad/core/keys/keys.dart';
 import 'package:hamad/features/auth/providers/auth_provider.dart';
 import 'package:hamad/features/statics/not_found.dart';
@@ -16,6 +19,7 @@ import 'app_routes.dart';
 import 'go_router_observer.dart';
 import 'routes.dart';
 
+<<<<<<< HEAD
 String getHomePath() {
   final role = getCurrentRole();
 
@@ -27,6 +31,8 @@ String getHomePath() {
   };
 }
 
+=======
+>>>>>>> 3ecac7f (first commit)
 final routerProvider = Provider<GoRouter>((ref) {
   // Initialize full path cache
   AppRoutePathCache.instance.init(routes);
@@ -70,19 +76,34 @@ final routerProvider = Provider<GoRouter>((ref) {
     //   AppLogs.error('GoRouter onException: ${state.error}', 'AppRoutes');
     // },
     redirect: (context, state) {
+<<<<<<< HEAD
       final storage = locator<StorageService>();
 
       final isOnboardingCompleted = true;
       // final isOnboardingCompleted = storage.readBool(onboardingKey);
+=======
+      // return null;
+      final storage = locator<StorageService>();
+
+      final isOnboardingCompleted = storage.readBool(onboardingKey);
+>>>>>>> 3ecac7f (first commit)
 
       // Extract the current path
       final currentPath = state.uri.path;
 
+<<<<<<< HEAD
       // Allowed paths for unauthenticated users
       final allowedUnauthPaths = [
         // AppRoutes.splash.path,
         AppRoutes.onboarding.path,
         AppRoutes.login.path,
+=======
+      final allowedUnauthPaths = [
+        AppRoutes.onboarding.fullPath,
+        AppRoutes.login.fullPath,
+        AppRoutes.register.fullPath,
+        AppRoutes.resetPassword.fullPath,
+>>>>>>> 3ecac7f (first commit)
       ];
 
       // 1. Show splash screen if auth state is loading or not available
@@ -98,16 +119,28 @@ final routerProvider = Provider<GoRouter>((ref) {
       // 3. Authenticated user logic
       if (isAuth.value.requireValue) {
         if (currentPath == AppRoutes.splash.path) {
+<<<<<<< HEAD
           return getHomePath();
+=======
+          return AppRoutes.home.path;
+>>>>>>> 3ecac7f (first commit)
         }
       }
 
       // 4. Unauthenticated user logic
       if (!isAuth.value.requireValue) {
         // Allow unauthenticated users to access their allowed paths
+<<<<<<< HEAD
         if (allowedUnauthPaths.contains(currentPath)) {
           return null; // Stay on the requested path
         }
+=======
+
+        if (allowedUnauthPaths.contains(currentPath)) {
+          return null; // Stay on the requested path
+        }
+
+>>>>>>> 3ecac7f (first commit)
         // Redirect to login if accessing an invalid path
         return AppRoutes.login.path;
       }
@@ -115,7 +148,11 @@ final routerProvider = Provider<GoRouter>((ref) {
       // 5. Allow navigation to register, reset password, or login if auth false
       if (isAuth.value.requireValue &&
           allowedUnauthPaths.contains(currentPath)) {
+<<<<<<< HEAD
         return getHomePath();
+=======
+        return AppRoutes.home.path;
+>>>>>>> 3ecac7f (first commit)
       }
 
       // 6. Allow navigation to register, reset password, or login if auth false

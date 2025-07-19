@@ -7,17 +7,27 @@ enum AppRoutes {
   onboarding('/onboarding', 'onboarding'),
   login('/login', 'login'),
   resetPassword('reset-password', 'resetPassword'),
+<<<<<<< HEAD
   // resetPasswordDone('reset-password-done', 'resetPasswordDone'),
   register('/register', 'register'),
   root('/root', 'root'),
   profile('/profile', 'profile'),
   changePassword('/change-password', 'changePassword'),
   updateProfile('/update-profile', 'updateProfile'),
+=======
+  resetPasswordDone('reset-password-done', 'resetPasswordDone'),
+  changePassword('change-password', 'changePassword'),
+  updateProfile('/update-profile', 'updateProfile'),
+  register('/register', 'register'),
+  root('/root', 'root'),
+  profile('/profile', 'profile'),
+>>>>>>> 3ecac7f (first commit)
   help('/help', 'help'),
   about('/about', 'about'),
   termsConditions('/terms-conditions', 'termsConditions'),
   privacyPolicy('/privacy-policy', 'privacyPolicy'),
   home('/home', 'home'),
+<<<<<<< HEAD
   notifications('/notifications', 'notifications'),
   settings('/settings', 'settings'),
   search('/search', 'search'),
@@ -59,6 +69,17 @@ enum AppRoutes {
   ),
   supervisorPepole('/supervisor/pepole', 'supervisorPepole'),
   supervisorCalendar('/supervisor/calendar', 'supervisorCalendar');
+=======
+  web('/web', 'web'),
+  favorite('/favorite', 'favorite'),
+  posts('/posts', 'posts'),
+  postDetails('post-details', 'postDetails'),
+  notifications('/notifications', 'notifications'),
+  settings('/settings', 'settings'),
+  courses('/courses', 'courses'),
+  courseDetails('/courses/:id', 'courseDetails'),
+  search('/search', 'search');
+>>>>>>> 3ecac7f (first commit)
 
   final String path;
   final String name;
@@ -67,3 +88,10 @@ enum AppRoutes {
 
   String get fullPath => AppRoutePathCache.instance.getFullPath(this);
 }
+<<<<<<< HEAD
+=======
+
+// extension AppRoutesX on AppRoutes {
+//   String get fullPath => AppRoutePathCache.instance.getFullPath(this);
+// }
+>>>>>>> 3ecac7f (first commit)

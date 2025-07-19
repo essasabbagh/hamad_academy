@@ -6,10 +6,13 @@ class AppImages {
 
   static const String iconsApple = "assets/icons/apple.png";
 
+<<<<<<< HEAD
   static const String iconsAsk = "assets/icons/ask.svg";
 
   static const String iconsAttach = "assets/icons/attach.svg";
 
+=======
+>>>>>>> 3ecac7f (first commit)
   static const String iconsBell = "assets/icons/bell.svg";
 
   static const String iconsBottombarBookOpenText = "assets/icons/bottombar/book_open_text.svg";
@@ -46,18 +49,24 @@ class AppImages {
 
   static const String iconsExam = "assets/icons/exam.svg";
 
+<<<<<<< HEAD
   static const String iconsExams = "assets/icons/exams.svg";
 
   static const String iconsFilePdf = "assets/icons/file_pdf.svg";
 
+=======
+>>>>>>> 3ecac7f (first commit)
   static const String iconsFileText = "assets/icons/file_text.svg";
 
   static const String iconsGallery = "assets/icons/gallery.svg";
 
   static const String iconsGoogle = "assets/icons/google.png";
 
+<<<<<<< HEAD
   static const String iconsHomework = "assets/icons/homework.svg";
 
+=======
+>>>>>>> 3ecac7f (first commit)
   static const String iconsLive = "assets/icons/live.svg";
 
   static const String iconsMapPoint = "assets/icons/map_point.svg";
@@ -66,6 +75,7 @@ class AppImages {
 
   static const String iconsNotebook = "assets/icons/notebook.svg";
 
+<<<<<<< HEAD
   static const String iconsNotes = "assets/icons/notes.svg";
 
   static const String iconsPlay = "assets/icons/play.svg";
@@ -90,6 +100,12 @@ class AppImages {
 
   static const String iconsThumbsupOutlined = "assets/icons/thumbsup_outlined.svg";
 
+=======
+  static const String iconsPlus = "assets/icons/plus.svg";
+
+  static const String iconsSend = "assets/icons/send.svg";
+
+>>>>>>> 3ecac7f (first commit)
   static const String iconsUser = "assets/icons/user.svg";
 
   static const String iconsVolume = "assets/icons/volume.svg";

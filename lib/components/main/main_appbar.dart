@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class MainAppBar extends StatelessWidget implements PreferredSizeWidget {
+<<<<<<< HEAD
   const MainAppBar({super.key, required this.title, this.actions, this.bottom})
     : assert(
         title is String || title is Widget,
@@ -9,6 +10,16 @@ class MainAppBar extends StatelessWidget implements PreferredSizeWidget {
       );
 
   final Object title; // Can be String or Widget
+=======
+  const MainAppBar({
+    super.key,
+    required this.title,
+    this.actions,
+    this.bottom,
+  });
+
+  final String title;
+>>>>>>> 3ecac7f (first commit)
   final List<Widget>? actions;
   final PreferredSizeWidget? bottom;
 
@@ -21,6 +32,7 @@ class MainAppBar extends StatelessWidget implements PreferredSizeWidget {
     backgroundColor: Theme.of(context).scaffoldBackgroundColor,
     surfaceTintColor: Theme.of(context).scaffoldBackgroundColor,
     centerTitle: true,
+<<<<<<< HEAD
     // title: ,
     title: title is String
         ? Text(
@@ -29,6 +41,9 @@ class MainAppBar extends StatelessWidget implements PreferredSizeWidget {
           )
         : title as Widget,
 
+=======
+    title: Text(title, style: const TextStyle(fontWeight: FontWeight.bold)),
+>>>>>>> 3ecac7f (first commit)
     // titleSpacing: 0,
     iconTheme: IconThemeData(color: Theme.of(context).colorScheme.onSurface),
     actions: actions,
