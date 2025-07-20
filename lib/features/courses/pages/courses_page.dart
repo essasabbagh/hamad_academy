@@ -9,7 +9,7 @@ import 'package:hamad/core/themes/app_styles.dart';
 import 'package:hamad/features/courses/widgets/course_card.dart';
 import 'package:hamad/features/courses/widgets/course_category_tab.dart';
 import 'package:hamad/features/courses/widgets/empty_courses.dart';
-import 'package:hamad/features/home/widgets/person_dropdown.dart';
+import 'package:hamad/features/student/home/widgets/person_dropdown.dart';
 
 class CoursesPage extends StatefulWidget {
   const CoursesPage({super.key});
@@ -96,7 +96,7 @@ class _CoursesPageState extends State<CoursesPage>
                 imageUrl: AppImages.imagesProductImage,
                 onTap: () {
                   context.pushNamed(
-                    AppRoutes.courseDetails.name,
+                    AppRoutes.studentCourseDetails.name,
                     pathParameters: {
                       'id': '1',
                     },
@@ -112,7 +112,7 @@ class _CoursesPageState extends State<CoursesPage>
                 imageUrl: AppImages.imagesProductImage,
                 onTap: () {
                   context.pushNamed(
-                    AppRoutes.courseDetails.name,
+                    AppRoutes.studentCourseDetails.name,
                     pathParameters: {
                       'id': '1',
                     },
@@ -128,7 +128,7 @@ class _CoursesPageState extends State<CoursesPage>
                 imageUrl: AppImages.imagesProductImage,
                 onTap: () {
                   context.pushNamed(
-                    AppRoutes.courseDetails.name,
+                    AppRoutes.studentCourseDetails.name,
                     pathParameters: {
                       'id': '1',
                     },

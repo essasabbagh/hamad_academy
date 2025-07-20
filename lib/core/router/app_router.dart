@@ -5,6 +5,7 @@ import 'package:go_transitions/go_transitions.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import 'package:hamad/core/data/storage_service.dart';
+import 'package:hamad/core/enums/roles.dart';
 import 'package:hamad/core/keys/keys.dart';
 import 'package:hamad/features/auth/providers/auth_provider.dart';
 import 'package:hamad/features/statics/not_found.dart';
@@ -14,6 +15,17 @@ import 'app_route_path_cache.dart';
 import 'app_routes.dart';
 import 'go_router_observer.dart';
 import 'routes.dart';
+
+String getHomePath() {
+  final role = getCurrentRole();
+
+  return switch (role) {
+    UserRole.student => AppRoutes.studentHome.path,
+    UserRole.teacher => AppRoutes.teacherHome.path,
+    UserRole.parent => AppRoutes.parentHome.path,
+    UserRole.supervisor => AppRoutes.supervisorHome.path,
+  };
+}
 
 final routerProvider = Provider<GoRouter>((ref) {
   // Initialize full path cache
@@ -58,7 +70,6 @@ final routerProvider = Provider<GoRouter>((ref) {
     //   AppLogs.error('GoRouter onException: ${state.error}', 'AppRoutes');
     // },
     redirect: (context, state) {
-      // return null;
       final storage = locator<StorageService>();
 
       final isOnboardingCompleted = storage.readBool(onboardingKey);
@@ -66,11 +77,11 @@ final routerProvider = Provider<GoRouter>((ref) {
       // Extract the current path
       final currentPath = state.uri.path;
 
+      // Allowed paths for unauthenticated users
       final allowedUnauthPaths = [
-        AppRoutes.onboarding.fullPath,
-        AppRoutes.login.fullPath,
-        AppRoutes.register.fullPath,
-        AppRoutes.resetPassword.fullPath,
+        // AppRoutes.splash.path,
+        AppRoutes.onboarding.path,
+        AppRoutes.login.path,
       ];
 
       // 1. Show splash screen if auth state is loading or not available
@@ -86,18 +97,16 @@ final routerProvider = Provider<GoRouter>((ref) {
       // 3. Authenticated user logic
       if (isAuth.value.requireValue) {
         if (currentPath == AppRoutes.splash.path) {
-          return AppRoutes.home.path;
+          return getHomePath();
         }
       }
 
       // 4. Unauthenticated user logic
       if (!isAuth.value.requireValue) {
         // Allow unauthenticated users to access their allowed paths
-
         if (allowedUnauthPaths.contains(currentPath)) {
           return null; // Stay on the requested path
         }
-
         // Redirect to login if accessing an invalid path
         return AppRoutes.login.path;
       }
@@ -105,7 +114,7 @@ final routerProvider = Provider<GoRouter>((ref) {
       // 5. Allow navigation to register, reset password, or login if auth false
       if (isAuth.value.requireValue &&
           allowedUnauthPaths.contains(currentPath)) {
-        return AppRoutes.home.path;
+        return getHomePath();
       }
 
       // 6. Allow navigation to register, reset password, or login if auth false

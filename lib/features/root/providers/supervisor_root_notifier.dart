@@ -5,20 +5,17 @@ import 'package:hamad/core/router/app_routes.dart';
 import 'package:hamad/core/router/go_router_extension.dart';
 
 // Define a mapping between AppRoutes enum values and tab indices
-final Map<AppRoutes, int> routeToIndexMap = {
-  AppRoutes.home: 0,
-  AppRoutes.studentCourses: 1,
-  AppRoutes.search: 2,
-  AppRoutes.notifications: 3,
+final Map<AppRoutes, int> supervisorRouteToIndexMap = {
+  AppRoutes.supervisorHome: 0,
+  AppRoutes.supervisorCourses: 1,
+  AppRoutes.supervisorPepole: 2,
+  AppRoutes.supervisorCalendar: 3,
   AppRoutes.profile: 4,
 };
 
-final rootProvider = StateNotifierProvider<RootNotifier, int>(
-  RootNotifier.new,
-);
-
-class RootNotifier extends StateNotifier<int> {
-  RootNotifier(this.ref) : super(0) {
+// StudentRootNotifier class
+class SupervisorRootNotifier extends StateNotifier<int> {
+  SupervisorRootNotifier(this.ref) : super(0) {
     // Listen to router changes
     ref.listen(routerProvider, (_, router) {
       _updateIndexFromRoute(router.location);
@@ -29,7 +26,7 @@ class RootNotifier extends StateNotifier<int> {
 
   void _updateIndexFromRoute(String currentLocation) {
     // Find matching route in our map
-    for (final entry in routeToIndexMap.entries) {
+    for (final entry in supervisorRouteToIndexMap.entries) {
       // Get the base path from the enum
       final routePath = entry.key.path;
 
@@ -45,10 +42,10 @@ class RootNotifier extends StateNotifier<int> {
     state = index;
 
     // Find the route corresponding to this index
-    final route = routeToIndexMap.entries
+    final route = supervisorRouteToIndexMap.entries
         .firstWhere(
           (entry) => entry.value == index,
-          orElse: () => const MapEntry(AppRoutes.home, 0),
+          orElse: () => const MapEntry(AppRoutes.studentHome, 0),
         )
         .key;
 
@@ -56,3 +53,9 @@ class RootNotifier extends StateNotifier<int> {
     ref.read(routerProvider).go(route.path);
   }
 }
+
+// Provider definition
+final supervisorRootProvider =
+    StateNotifierProvider<SupervisorRootNotifier, int>(
+      SupervisorRootNotifier.new,
+    );

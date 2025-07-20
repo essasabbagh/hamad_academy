@@ -7,7 +7,7 @@ import 'package:hamad/core/constants/images.dart';
 import 'package:hamad/core/extensions/extensions.dart';
 import 'package:hamad/core/themes/app_colors.dart';
 import 'package:hamad/core/utils/snackbars.dart';
-import 'package:hamad/features/home/models/course_data.dart';
+import 'package:hamad/features/student/home/models/course_data.dart';
 
 class ExpandableCourseWidget extends StatefulWidget {
   const ExpandableCourseWidget({
