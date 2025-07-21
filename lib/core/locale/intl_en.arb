@@ -108,5 +108,6 @@
   "sessionsCompleted": "{count, plural, one {Session} other {Sessions}}",
   "courseDetails": "Course details",
   "joinNow": "Join now",
-  "reschedule": "Reschedule"
+  "reschedule": "Reschedule",
+  "math": "Math"
 }

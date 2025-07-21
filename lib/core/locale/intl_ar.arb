@@ -303,6 +303,7 @@
   "subscribedToDate": "مشترك في: {date}",
   "sessionsCompleted": "{count, plural, one {جلسة} other {جلسات}}",
   "courseDetails": "تفاصيل الدورة",
-  "joinNow": "Join now",
-  "reschedule": "Reschedule"
+  "joinNow": "انضم الآن",
+  "reschedule": "إعادة جدولة",
+  "math": "الرياضيات"
 }

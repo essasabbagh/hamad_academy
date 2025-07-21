@@ -104,7 +104,7 @@ class _CoursesPageState extends State<CoursesPage>
                 },
               ),
               CourseCard(
-                title: 'الرياضيات',
+                title: S.of(context).math,
                 date: '12 مايو 2025',
                 description: 'الرياضيات الممتعة مع المعلمة روان',
                 sessionsCompleted: 1,
