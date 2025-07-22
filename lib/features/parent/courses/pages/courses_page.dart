@@ -6,9 +6,9 @@ import 'package:hamad/core/constants/images.dart';
 import 'package:hamad/core/locale/generated/l10n.dart';
 import 'package:hamad/core/router/app_routes.dart';
 import 'package:hamad/core/themes/app_styles.dart';
-import 'package:hamad/features/courses/widgets/course_card.dart';
-import 'package:hamad/features/courses/widgets/course_category_tab.dart';
-import 'package:hamad/features/courses/widgets/empty_courses.dart';
+import 'package:hamad/features/parent/courses/widgets/course_card.dart';
+import 'package:hamad/features/parent/courses/widgets/course_category_tab.dart';
+import 'package:hamad/features/parent/courses/widgets/empty_courses.dart';
 import 'package:hamad/features/student/home/widgets/person_dropdown.dart';
 
 class CoursesPage extends StatefulWidget {
