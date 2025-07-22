@@ -1,19 +1,16 @@
 import 'package:flutter/material.dart';
 
-import 'package:hamad/components/web/web.dart';
-import 'package:hamad/core/errors/error_handler_usage_examples.dart';
 import 'package:hamad/core/keys/keys.dart';
 import 'package:hamad/core/log/app_log.dart';
 import 'package:hamad/core/router/app_routes.dart';
 import 'package:hamad/features/auth/pages/login_screen.dart';
 import 'package:hamad/features/auth/pages/password_reset_screen.dart';
 import 'package:hamad/features/auth/pages/register_screen.dart';
-import 'package:hamad/features/courses/pages/course_details_page.dart';
-import 'package:hamad/features/courses/pages/courses_page.dart';
-// import 'package:hamad/features/category/category_screen.dart';
 import 'package:hamad/features/help/pages/help_screen.dart';
 import 'package:hamad/features/notification/screens/notifications_screen.dart';
 import 'package:hamad/features/onboarding/onboarding_screen.dart';
+import 'package:hamad/features/parent/courses/pages/course_details_page.dart';
+import 'package:hamad/features/parent/courses/pages/courses_page.dart';
 import 'package:hamad/features/parent/home/pages/home.dart';
 import 'package:hamad/features/profile/pages/change_password_screen.dart';
 import 'package:hamad/features/profile/pages/profile_screen.dart';
@@ -26,6 +23,7 @@ import 'package:hamad/features/statics/about.dart';
 import 'package:hamad/features/statics/privacy_policy.dart';
 import 'package:hamad/features/statics/terms_conditions.dart';
 import 'package:hamad/features/student/home/pages/home.dart';
+import 'package:hamad/features/student/lesson_details/pages/lesson_details.dart';
 import 'package:hamad/features/student/subscibed_courses/pages/subscribed_courses_page.dart';
 import 'package:hamad/features/supervisor/home/pages/home.dart';
 import 'package:hamad/features/teacher/home/pages/home.dart';
@@ -99,7 +97,10 @@ List<RouteBase> routes = <RouteBase>[
         path: AppRoutes.studentHome.path,
         parentNavigatorKey: shellNavigatorKey,
         // builder: (_, _) => const StudentHomePage(),
-        builder: (_, _) => const SuscribedCoursesScreen(),
+        builder: (_, _) => const SuscribedCoursesScreen(
+          courseId:
+              '1', // Example courseId, replace with actual logic if needed
+        ),
       ),
       GoRoute(
         name: AppRoutes.studentCourses.name,
@@ -113,7 +114,7 @@ List<RouteBase> routes = <RouteBase>[
             path: AppRoutes.studentCourseDetails.path,
             name: AppRoutes.studentCourseDetails.name,
             builder: (context, state) {
-              final id = state.pathParameters['id'];
+              final id = state.pathParameters['courseId'];
               AppLog.info('id: $id');
               return const CourseDetailsPage();
             },
@@ -122,9 +123,20 @@ List<RouteBase> routes = <RouteBase>[
             path: AppRoutes.studentsubscribedCourseDetails.path,
             name: AppRoutes.studentsubscribedCourseDetails.name,
             builder: (context, state) {
-              final id = state.pathParameters['id'];
-              AppLog.info('id: $id');
-              return const SuscribedCoursesScreen();
+              final id = state.pathParameters['courseId'];
+              return SuscribedCoursesScreen(
+                courseId: id ?? '',
+              );
+            },
+          ),
+          GoRoute(
+            path: AppRoutes.studentsubscribedLessonDetails.path,
+            name: AppRoutes.studentsubscribedLessonDetails.name,
+            builder: (context, state) {
+              final lessonId = state.pathParameters['lessonId'];
+              return LessonDetailsPage(
+                lessonId: lessonId ?? '',
+              );
             },
           ),
         ],
@@ -159,8 +171,7 @@ List<RouteBase> routes = <RouteBase>[
             path: AppRoutes.parentCourseDetails.path,
             name: AppRoutes.parentCourseDetails.name,
             builder: (context, state) {
-              final id = state.pathParameters['id'];
-              AppLog.info('id: $id');
+              final id = state.pathParameters['courseId'];
               return const CourseDetailsPage();
             },
           ),

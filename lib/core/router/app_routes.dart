@@ -26,10 +26,14 @@ enum AppRoutes {
 
   studentHome('/student/home', 'studentHome'),
   studentCourses('/student/courses', 'courses'),
-  studentCourseDetails('/student/courses/:id', 'courseDetails'),
+  studentCourseDetails('/student/courses/:courseId', 'courseDetails'),
   studentsubscribedCourseDetails(
-    '/student/subscribedCourses/:id',
+    '/student/subscribedCourses/:courseId',
     'studentsubscribedCourseDetails',
+  ),
+  studentsubscribedLessonDetails(
+    '/lessons/:lessonId',
+    'studentsubscribedLessonDetails',
   ),
   studentFavorites('/student/favorites', 'favorites'),
 
