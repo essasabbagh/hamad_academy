@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 
 import 'package:hamad/components/images/svg_asset.dart';
+import 'package:hamad/components/ui/section_title.dart';
 import 'package:hamad/core/constants/images.dart';
 import 'package:hamad/core/locale/generated/l10n.dart';
 import 'package:hamad/core/themes/app_colors.dart';
 import 'package:hamad/core/themes/app_styles.dart';
 import 'package:hamad/core/utils/snackbars.dart';
-
-import 'section_title.dart';
 
 class LessonSection extends StatelessWidget {
   const LessonSection({

@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 
 import 'package:hamad/components/course/expandable_widget.dart';
 import 'package:hamad/components/images/svg_asset.dart';
+import 'package:hamad/components/lesson/lesson_item.dart';
 import 'package:hamad/core/constants/images.dart';
+import 'package:hamad/core/router/app_routes.dart';
 import 'package:hamad/core/themes/app_colors.dart';
+import 'package:hamad/core/themes/shadows.dart';
 
 import '../models/lesson_data.dart';
 
@@ -31,13 +34,7 @@ class ExpandableLessonWidget extends StatelessWidget {
           decoration: BoxDecoration(
             color: AppColors.white,
             borderRadius: BorderRadius.circular(12),
-            boxShadow: [
-              BoxShadow(
-                color: AppColors.shadowColor.withOpacity(0.08),
-                blurRadius: 8,
-                offset: const Offset(0, 2),
-              ),
-            ],
+            boxShadow: baseBoxShadow,
           ),
           child: ExpandableWidget(
             header: Padding(
@@ -75,19 +72,43 @@ class ExpandableLessonWidget extends StatelessWidget {
                 cardPadding,
                 cardPadding,
               ),
-              child: const Column(
+              child: Column(
                 children: [
-                  _LessonDetail(
+                  LessonItem(
                     title: 'درس 1',
                     subtitle: '3 فيديو - 25 دقيقة',
+                    onTap: () {
+                      context.pushNamed(
+                        AppRoutes.studentsubscribedLessonDetails.name,
+                        pathParameters: {
+                          'lessonId': '1',
+                        },
+                      );
+                    },
                   ),
-                  _LessonDetail(
+                  LessonItem(
                     title: 'درس 2',
                     subtitle: '3 فيديو - 25 دقيقة',
+                    onTap: () {
+                      context.pushNamed(
+                        AppRoutes.studentsubscribedLessonDetails.name,
+                        pathParameters: {
+                          'lessonId': '1',
+                        },
+                      );
+                    },
                   ),
-                  _LessonDetail(
+                  LessonItem(
                     title: 'درس 3',
                     subtitle: '3 فيديو - 25 دقيقة',
+                    onTap: () {
+                      context.pushNamed(
+                        AppRoutes.studentsubscribedLessonDetails.name,
+                        pathParameters: {
+                          'lessonId': '1',
+                        },
+                      );
+                    },
                   ),
                 ],
               ),
@@ -95,28 +116,6 @@ class ExpandableLessonWidget extends StatelessWidget {
           ),
         );
       },
-    );
-  }
-}
-
-class _LessonDetail extends StatelessWidget {
-  const _LessonDetail({
-    required this.title,
-    required this.subtitle,
-  });
-  final String title;
-  final String subtitle;
-
-  @override
-  Widget build(BuildContext context) {
-    return ListTile(
-      trailing: const SvgAsset(
-        AppImages.iconsDoneOutline,
-        color: AppColors.success600,
-        width: 24,
-      ),
-      title: Text(title),
-      subtitle: Text(subtitle),
     );
   }
 }

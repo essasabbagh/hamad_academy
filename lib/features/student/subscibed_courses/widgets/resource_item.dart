@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'package:hamad/components/images/svg_asset.dart';
 import 'package:hamad/core/constants/images.dart';
 import 'package:hamad/core/themes/app_colors.dart';
 import 'package:hamad/core/utils/snackbars.dart';
@@ -32,7 +33,12 @@ class ResourceItem extends StatelessWidget {
           ],
         ),
         child: ListTile(
-          leading: Image.asset(AppImages.imagesFileTypesFilePdf, width: 24),
+          // leading: Image.asset(AppImages.imagesFileTypesFilePdf, width: 24),
+          leading: const SvgAsset(
+            AppImages.iconsFilePdf,
+            color: AppColors.blackColor,
+            width: 24,
+          ),
           title: Text(title),
           trailing: const Icon(
             Icons.file_download_outlined,
