@@ -42,11 +42,15 @@ class AppImages {
 
   static const String iconsExam = "assets/icons/exam.svg";
 
+  static const String iconsExams = "assets/icons/exams.svg";
+
   static const String iconsFileText = "assets/icons/file_text.svg";
 
   static const String iconsGallery = "assets/icons/gallery.svg";
 
   static const String iconsGoogle = "assets/icons/google.png";
+
+  static const String iconsHomework = "assets/icons/homework.svg";
 
   static const String iconsLive = "assets/icons/live.svg";
 
@@ -56,9 +60,21 @@ class AppImages {
 
   static const String iconsNotebook = "assets/icons/notebook.svg";
 
+  static const String iconsNotes = "assets/icons/notes.svg";
+
+  static const String iconsPlay = "assets/icons/play.svg";
+
   static const String iconsPlus = "assets/icons/plus.svg";
 
+  static const String iconsQa = "assets/icons/qa.svg";
+
+  static const String iconsQuickReview = "assets/icons/quick_review.svg";
+
+  static const String iconsSeemore = "assets/icons/seemore.svg";
+
   static const String iconsSend = "assets/icons/send.svg";
+
+  static const String iconsSummary = "assets/icons/summary.svg";
 
   static const String iconsUser = "assets/icons/user.svg";
 
@@ -103,6 +119,8 @@ class AppImages {
   static const String imagesFileTypesCdr = "assets/images/file_types/cdr.png";
 
   static const String imagesFileTypesDoc = "assets/images/file_types/doc.png";
+
+  static const String imagesFileTypesFilePdf = "assets/images/file_types/file_pdf.png";
 
   static const String imagesFileTypesPdf = "assets/images/file_types/pdf.png";
 
