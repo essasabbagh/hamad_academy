@@ -72,7 +72,8 @@ final routerProvider = Provider<GoRouter>((ref) {
     redirect: (context, state) {
       final storage = locator<StorageService>();
 
-      final isOnboardingCompleted = storage.readBool(onboardingKey);
+      final isOnboardingCompleted = true;
+      // final isOnboardingCompleted = storage.readBool(onboardingKey);
 
       // Extract the current path
       final currentPath = state.uri.path;
