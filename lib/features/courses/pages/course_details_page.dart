@@ -4,11 +4,10 @@ import 'package:hamad/core/constants/images.dart';
 import 'package:hamad/core/enums/session_status.dart';
 import 'package:hamad/core/extensions/context_ext.dart';
 import 'package:hamad/core/themes/app_colors.dart';
-import 'package:hamad/core/themes/app_fonts.dart';
-import 'package:hamad/features/courses/widgets/session_card.dart';
 import 'package:hamad/features/courses/widgets/course_details_section.dart';
+import 'package:hamad/features/courses/widgets/session_card.dart';
 
-import '../widgets/course_details_header.dart';
+import '../../../components/course/course_details_header.dart';
 
 class CourseDetailsPage extends StatefulWidget {
   const CourseDetailsPage({super.key});

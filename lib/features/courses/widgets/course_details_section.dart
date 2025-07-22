@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
+
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:percent_indicator/linear_percent_indicator.dart';
+
 import 'package:hamad/components/session/full_width_button.dart';
 import 'package:hamad/components/session/session_state.dart';
 import 'package:hamad/core/constants/images.dart';
 import 'package:hamad/core/extensions/context_ext.dart';
 import 'package:hamad/core/themes/app_colors.dart';
 import 'package:hamad/core/themes/app_styles.dart';
-import 'package:percent_indicator/linear_percent_indicator.dart';
 
 class CourseDetailsSection extends StatelessWidget {
   const CourseDetailsSection({super.key});
@@ -18,10 +20,9 @@ class CourseDetailsSection extends StatelessWidget {
       margin: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),
-        color: AppColors.primary25,
+        color: AppColors.white,
       ),
       child: Column(
-        // mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const Align(
@@ -63,9 +64,7 @@ class CourseDetailsSection extends StatelessWidget {
               ),
             ],
           ),
-
           const SizedBox(height: 12),
-
           LinearPercentIndicator(
             percent: .8,
             lineHeight: 8.0,

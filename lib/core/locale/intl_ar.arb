@@ -121,7 +121,7 @@
   "latest": "أُضيف حديثاً",
   "category": "التصنيف",
   "categories": "التصنيفات",
-  "seeMore": "أظهر المزيد",
+  "seeMore": "رؤية المزيد",
   "showLess": "أظهر القليل",
   "notifications": "الإشعارات",
   "downloads": "التنزيلات",
@@ -305,5 +305,7 @@
   "courseDetails": "تفاصيل الدورة",
   "joinNow": "انضم الآن",
   "reschedule": "إعادة جدولة",
-  "math": "الرياضيات"
+  "math": "الرياضيات",
+  "showAll": "عرض الكل",
+  "sources": "المصادر"
 }

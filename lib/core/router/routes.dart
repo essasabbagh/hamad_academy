@@ -26,6 +26,7 @@ import 'package:hamad/features/statics/about.dart';
 import 'package:hamad/features/statics/privacy_policy.dart';
 import 'package:hamad/features/statics/terms_conditions.dart';
 import 'package:hamad/features/student/home/pages/home.dart';
+import 'package:hamad/features/student/subscibed_courses/pages/subscribed_courses_page.dart';
 import 'package:hamad/features/supervisor/home/pages/home.dart';
 import 'package:hamad/features/teacher/home/pages/home.dart';
 
@@ -97,7 +98,8 @@ List<RouteBase> routes = <RouteBase>[
         name: AppRoutes.studentHome.name,
         path: AppRoutes.studentHome.path,
         parentNavigatorKey: shellNavigatorKey,
-        builder: (_, _) => const StudentHomePage(),
+        // builder: (_, _) => const StudentHomePage(),
+        builder: (_, _) => const SuscribedCoursesScreen(),
       ),
       GoRoute(
         name: AppRoutes.studentCourses.name,
@@ -114,6 +116,15 @@ List<RouteBase> routes = <RouteBase>[
               final id = state.pathParameters['id'];
               AppLog.info('id: $id');
               return const CourseDetailsPage();
+            },
+          ),
+          GoRoute(
+            path: AppRoutes.studentsubscribedCourseDetails.path,
+            name: AppRoutes.studentsubscribedCourseDetails.name,
+            builder: (context, state) {
+              final id = state.pathParameters['id'];
+              AppLog.info('id: $id');
+              return const SuscribedCoursesScreen();
             },
           ),
         ],

@@ -109,5 +109,8 @@
   "courseDetails": "Course details",
   "joinNow": "Join now",
   "reschedule": "Reschedule",
-  "math": "Math"
+  "math": "Math",
+  "seeMore": "See More",
+  "showAll": "Show All",
+  "sources": "Sources"
 }

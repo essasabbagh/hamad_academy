@@ -108,6 +108,7 @@ flutter:
     - assets/icons/bottombar/
     - assets/images/
     - assets/images/onboarding/
+    - assets/images/file_types/
     - assets/images/empty_state/
     - assets/images/empty_images/
 
