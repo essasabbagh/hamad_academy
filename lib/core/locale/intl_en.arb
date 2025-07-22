@@ -114,7 +114,10 @@
   "seeMore": "See More",
   "showAll": "Show All",
   "sources": "Sources"
+<<<<<<< HEAD
 =======
   "reschedule": "Reschedule"
 >>>>>>> 3ecac7f (first commit)
+=======
+>>>>>>> 903c88e (Add new translations)
 }

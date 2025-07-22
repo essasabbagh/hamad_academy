@@ -121,11 +121,10 @@
   "latest": "أُضيف حديثاً",
   "category": "التصنيف",
   "categories": "التصنيفات",
-<<<<<<< HEAD
   "seeMore": "رؤية المزيد",
-=======
   "seeMore": "أظهر المزيد",
->>>>>>> 3ecac7f (first commit)
+
+  "seeMore": "رؤية المزيد",
   "showLess": "أظهر القليل",
   "notifications": "الإشعارات",
   "downloads": "التنزيلات",
@@ -307,14 +306,11 @@
   "subscribedToDate": "مشترك في: {date}",
   "sessionsCompleted": "{count, plural, one {جلسة} other {جلسات}}",
   "courseDetails": "تفاصيل الدورة",
-<<<<<<< HEAD
   "joinNow": "انضم الآن",
   "reschedule": "إعادة جدولة",
   "math": "الرياضيات",
   "showAll": "عرض الكل",
-  "sources": "المصادر"
-=======
+  "sources": "المصادر",
   "joinNow": "Join now",
   "reschedule": "Reschedule"
->>>>>>> 3ecac7f (first commit)
 }
