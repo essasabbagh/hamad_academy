@@ -8,10 +8,11 @@ class AppColors {
   static const Color primary100 = Color(0xFFD9CDEE);
   static const Color primary200 = Color(0xFFB89EDC);
   static const Color primary300 = Color(0xFF9770CA);
-  static const Color primary400 = Color(0xFF7F52BD);
+  // static const Color primary400 = Color(0xFF7F52BD);
   static const Color primary500 = primaryColor; // Base: Brand 700
   static const Color primary600 = Color(0xFF543787);
   static const Color primary700 = Color(0xFF6A4099);
+
   static const Color primary800 = Color(0xFF55317C);
   static const Color primary900 = Color(0xFF2B1947);
   static const Color primary950 = Color(0xFF1F1133);
@@ -19,14 +20,15 @@ class AppColors {
 
   // Accent Colors (with Accent 600 as the base/500 shade)
   static const Color accentColor = Color(0xFFFBCD09); // Accent 600 (Base)
-  static const Color accent25 = Color(0xFFFFFDF2);
-  static const Color accent50 = Color(0xFFFFF8E5);
-  static const Color accent100 = Color(0xFFFFF0CC);
-  static const Color accent200 = Color(0xFFFFE599);
-  static const Color accent300 = Color(0xFFFFDB66);
-  static const Color accent400 = Color(0xFFFFD133);
+  static const Color accent25 = Color(0xFFFCFAF3);
+  // static const Color accent50 = Color(0xFFFFF8E5);
+  // static const Color accent100 = Color(0xFFFFF0CC);
+  // static const Color accent200 = Color(0xFFFFE599);
+  // static const Color accent300 = Color(0xFFFFDB66);
+  // static const Color accent400 = Color(0xFFFFD133);
   static const Color accent500 = accentColor; // Base: Accent 600
   static const Color accent600 = Color(0xFFFBCD09);
+
   static const Color accent700 = Color(0xFFD6AD00);
   static const Color accent800 = Color(0xFFB38606);
   static const Color accent900 = Color(0xFF996D05);
@@ -66,19 +68,21 @@ class AppColors {
 
   // Success Colors (with Success 600 as the base/500 shade)
   static const Color successColor = Color(0xFF48BB78); // Success 600 (Base)
-  static const Color success25 = Color(0xFFF7FCF9);
-  static const Color success50 = Color(0xFFEDF8F1);
-  static const Color success100 = Color(0xFFD9F0E3);
-  static const Color success200 = Color(0xFFB3E0C7);
-  static const Color success300 = Color(0xFF8CD1AB);
-  static const Color success400 = Color(0xFF66C28F);
-  static const Color success500 = successColor; // Base: Success 600
+  // static const Color success25 = Color(0xFFF7FCF9);
+  // static const Color success50 = Color(0xFFEDF8F1);
+  // static const Color success100 = Color(0xFFD9F0E3);
+  // static const Color success200 = Color(0xFFB3E0C7);
+  // static const Color success300 = Color(0xFF8CD1AB);
+  // static const Color success400 = Color(0xFF66C28F);
+  // static const Color success500 = successColor; // Base: Success 600
   static const Color success600 = Color(0xFF3DA368);
   static const Color success700 = Color(0xFF389F63);
-  static const Color success800 = Color(0xFF27734A);
-  static const Color success900 = Color(0xFF1C5A3B);
-  static const Color success950 = Color(0xFF11422C);
-  static const Color success1000 = Color(0xFF06291D);
+  static const Color successAlpha = Color(0x1A48BB78);
+
+  // static const Color success800 = Color(0xFF27734A);
+  // static const Color success900 = Color(0xFF1C5A3B);
+  // static const Color success950 = Color(0xFF11422C);
+  // static const Color success1000 = Color(0xFF06291D);
 
   // Error Colors (with Error 600 as the base/500 shade)
   static const Color errorColor = Color(0xFFDC3545); // Error 600 (Base)
@@ -113,33 +117,33 @@ class AppColors {
   static const Color warning1000 = Color(0xFF664901);
 
   // Alpha Shades for primaryColor (0xFF6A4099)
-  static const Color primaryAlpha95 = Color(0xF26A4099);
-  static const Color primaryAlpha90 = Color(0xE66A4099);
-  static const Color primaryAlpha85 = Color(0xD96A4099);
-  static const Color primaryAlpha80 = Color(0xCC6A4099);
-  static const Color primaryAlpha75 = Color(0xBF6A4099);
-  static const Color primaryAlpha70 = Color(0xB36A4099);
-  static const Color primaryAlpha65 = Color(0xA66A4099);
-  static const Color primaryAlpha60 = Color(0x996A4099);
-  static const Color primaryAlpha55 = Color(0x8C6A4099);
-  static const Color primaryAlpha50 = Color(0x806A4099);
-  static const Color primaryAlpha45 = Color(0x736A4099);
-  static const Color primaryAlpha40 = Color(0x666A4099);
-  static const Color primaryAlpha35 = Color(0x596A4099);
-  static const Color primaryAlpha30 = Color(0x4D6A4099);
-  static const Color primaryAlpha25 = Color(0x406A4099);
-  static const Color primaryAlpha20 = Color(0x336A4099);
-  static const Color primaryAlpha15 = Color(0x266A4099);
-  static const Color primaryAlpha10 = Color(0x1A6A4099);
-  static const Color primaryAlpha9 = Color(0x176A4099);
-  static const Color primaryAlpha8 = Color(0x146A4099);
-  static const Color primaryAlpha7 = Color(0x126A4099);
-  static const Color primaryAlpha6 = Color(0x0F6A4099);
-  static const Color primaryAlpha5 = Color(0x0D6A4099);
-  static const Color primaryAlpha4 = Color(0x0A6A4099);
-  static const Color primaryAlpha3 = Color(0x086A4099);
-  static const Color primaryAlpha2 = Color(0x056A4099);
-  static const Color primaryAlpha1 = Color(0x036A4099);
+  // static const Color primaryAlpha95 = Color(0xF26A4099);
+  // static const Color primaryAlpha90 = Color(0xE66A4099);
+  // static const Color primaryAlpha85 = Color(0xD96A4099);
+  // static const Color primaryAlpha80 = Color(0xCC6A4099);
+  // static const Color primaryAlpha75 = Color(0xBF6A4099);
+  // static const Color primaryAlpha70 = Color(0xB36A4099);
+  // static const Color primaryAlpha65 = Color(0xA66A4099);
+  // static const Color primaryAlpha60 = Color(0x996A4099);
+  // static const Color primaryAlpha55 = Color(0x8C6A4099);
+  // static const Color primaryAlpha50 = Color(0x806A4099);
+  // static const Color primaryAlpha45 = Color(0x736A4099);
+  // static const Color primaryAlpha40 = Color(0x666A4099);
+  // static const Color primaryAlpha35 = Color(0x596A4099);
+  // static const Color primaryAlpha30 = Color(0x4D6A4099);
+  // static const Color primaryAlpha25 = Color(0x406A4099);
+  // static const Color primaryAlpha20 = Color(0x336A4099);
+  // static const Color primaryAlpha15 = Color(0x266A4099);
+  // static const Color primaryAlpha10 = Color(0x1A6A4099);
+  // static const Color primaryAlpha9 = Color(0x176A4099);
+  // static const Color primaryAlpha8 = Color(0x146A4099);
+  // static const Color primaryAlpha7 = Color(0x126A4099);
+  // static const Color primaryAlpha6 = Color(0x0F6A4099);
+  // static const Color primaryAlpha5 = Color(0x0D6A4099);
+  // static const Color primaryAlpha4 = Color(0x0A6A4099);
+  // static const Color primaryAlpha3 = Color(0x086A4099);
+  // static const Color primaryAlpha2 = Color(0x056A4099);
+  // static const Color primaryAlpha1 = Color(0x036A4099);
 
   static const Color lightPrimaryColor = Color(0xffE6F7FD);
 
@@ -150,6 +154,7 @@ class AppColors {
   static const Color lightColor = Color(0xFFE6ECF1);
 
   static const Color white = Color(0xFFFFFFFF);
+  static const Color whiteShade = Color(0xFFFAFAFA);
 
   static const Color textPrimary = Color(0xff001930);
 
@@ -168,9 +173,12 @@ class AppColors {
   static const Color shadowColor = Color(0x132C4A0F);
 
   static const Color color2 = Color(0xFFEF4C66);
+  static final Color color2Background = color2.withValues(alpha: .06);
+
   static const Color blue = Color(0xFF007AFF);
+  static final Color blueBackground = blue.withValues(alpha: .1);
 
   static const Color cardColor = Color(0xFFF8F9FA);
   static const Color surfaceColor = Color(0xFFF8F8F8);
-  // static const Color surfaceColor = Color(0xffF5FAFC);
+  static const Color blackColor = Color(0xFF131313);
 }
