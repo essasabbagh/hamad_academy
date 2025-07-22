@@ -8,11 +8,7 @@ import 'package:hamad/core/constants/images.dart';
 import 'package:hamad/core/themes/app_styles.dart';
 
 import '../models/course_data.dart';
-import '../widgets/badge_icon_widget.dart';
-import '../widgets/expandable_widget.dart';
-import '../widgets/home_section_title.dart';
-import '../widgets/person_dropdown.dart';
-import '../widgets/reminder_carousel.dart';
+import '../widgets/widgets.dart';
 
 class StudentHomePage extends ConsumerWidget {
   const StudentHomePage({super.key});

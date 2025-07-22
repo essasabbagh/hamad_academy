@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:hamad/core/themes/app_styles.dart';
 
 class HomeSectionTitle extends StatelessWidget {
