@@ -5,10 +5,7 @@ import 'package:hamad/components/images/svg_asset.dart';
 import 'package:hamad/components/lesson/lesson_item.dart';
 import 'package:hamad/components/main/logo.dart';
 import 'package:hamad/components/main/main_appbar.dart';
-import 'package:hamad/components/ui/base_container.dart';
-import 'package:hamad/components/ui/feature_grid.dart';
-import 'package:hamad/components/ui/percent_indicator.dart';
-import 'package:hamad/components/ui/section_title.dart';
+import 'package:hamad/components/ui/ui.dart';
 import 'package:hamad/core/constants/images.dart';
 import 'package:hamad/core/router/app_routes.dart';
 import 'package:hamad/core/themes/app_colors.dart';
@@ -105,7 +102,6 @@ class LessonDetailsPage extends StatelessWidget {
               ),
             ),
           ),
-
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: FeatureGrid(

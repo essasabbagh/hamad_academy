@@ -8,7 +8,7 @@ class SvgAsset extends StatelessWidget {
     super.key,
     this.width,
     this.height,
-    required this.color,
+    this.color,
   });
 
   final String assetName;

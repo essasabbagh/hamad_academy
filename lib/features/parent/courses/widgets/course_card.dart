@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:percent_indicator/linear_percent_indicator.dart';
-
-import 'package:hamad/core/extensions/context_ext.dart';
+import 'package:hamad/components/ui/percent_indicator.dart';
 import 'package:hamad/core/locale/generated/l10n.dart';
 import 'package:hamad/core/themes/app_colors.dart';
 import 'package:hamad/core/themes/app_styles.dart';
@@ -82,16 +80,11 @@ class CourseCard extends StatelessWidget {
                   style: const TextStyle(fontSize: 10),
                 ),
                 const SizedBox(height: 4),
-                LinearPercentIndicator(
-                  percent: sessionsCompleted / totalSessions,
-                  lineHeight: 8.0,
-                  isRTL: context.isRtl,
-                  padding: EdgeInsets.zero,
-                  barRadius: const Radius.circular(4),
+                PercentIndicator(
+                  progress: sessionsCompleted / totalSessions,
                   progressColor: (sessionsCompleted / totalSessions) >= 0.5
                       ? AppColors.success700
                       : AppColors.color2,
-                  backgroundColor: Colors.grey.shade200,
                 ),
                 const SizedBox(height: 12),
                 Text(

@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:percent_indicator/linear_percent_indicator.dart';
 
 import 'package:hamad/components/session/full_width_button.dart';
 import 'package:hamad/components/session/session_state.dart';
+import 'package:hamad/components/ui/percent_indicator.dart';
 import 'package:hamad/core/constants/images.dart';
-import 'package:hamad/core/extensions/context_ext.dart';
 import 'package:hamad/core/themes/app_colors.dart';
 import 'package:hamad/core/themes/app_styles.dart';
 
@@ -65,14 +64,9 @@ class CourseDetailsSection extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 12),
-          LinearPercentIndicator(
-            percent: .8,
-            lineHeight: 8.0,
-            isRTL: context.isRtl,
-            padding: EdgeInsets.zero,
-            barRadius: const Radius.circular(4),
-            progressColor: .8 >= .5 ? AppColors.success700 : AppColors.color2,
-            backgroundColor: Colors.grey.shade200,
+          const PercentIndicator(
+            progress: 0.8,
+            progressColor: 0.8 >= 0.5 ? AppColors.success700 : AppColors.color2,
           ),
           const SizedBox(height: 12),
           const Row(

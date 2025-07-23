@@ -33,7 +33,6 @@ class ResourceItem extends StatelessWidget {
           ],
         ),
         child: ListTile(
-          // leading: Image.asset(AppImages.imagesFileTypesFilePdf, width: 24),
           leading: const SvgAsset(
             AppImages.iconsFilePdf,
             color: AppColors.blackColor,

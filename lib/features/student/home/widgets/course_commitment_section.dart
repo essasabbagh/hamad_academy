@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:percent_indicator/linear_percent_indicator.dart';
 
+import 'package:hamad/components/ui/percent_indicator.dart';
 import 'package:hamad/core/constants/images.dart';
-import 'package:hamad/core/extensions/extensions.dart';
 import 'package:hamad/core/themes/app_colors.dart';
 
 import '../models/course_data.dart';
@@ -80,14 +79,9 @@ class CourseCommitmentSection extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 12),
-          LinearPercentIndicator(
-            percent: courseData.commitmentPercentage / 100,
-            lineHeight: 8.0,
-            isRTL: context.isRtl,
-            padding: EdgeInsets.zero,
-            barRadius: const Radius.circular(4),
+          PercentIndicator(
+            progress: courseData.commitmentPercentage / 100,
             progressColor: progressColor,
-            backgroundColor: Colors.grey.shade200,
           ),
           const SizedBox(height: 12),
           Row(

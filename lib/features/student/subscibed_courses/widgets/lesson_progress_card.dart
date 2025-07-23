@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'package:percent_indicator/linear_percent_indicator.dart';
-
 import 'package:hamad/components/images/svg_asset.dart';
+import 'package:hamad/components/ui/percent_indicator.dart';
 import 'package:hamad/core/constants/images.dart';
-import 'package:hamad/core/extensions/context_ext.dart';
 import 'package:hamad/core/themes/app_colors.dart';
 import 'package:hamad/core/themes/shadows.dart';
 
@@ -21,9 +19,9 @@ class LessonProgressCard extends StatelessWidget {
         color: AppColors.white,
         boxShadow: baseBoxShadow,
       ),
-      child: Column(
+      child: const Column(
         children: [
-          const Align(
+          Align(
             alignment: AlignmentDirectional.centerStart,
             child: Text(
               '3 من 12 درس مكتمل',
@@ -32,18 +30,13 @@ class LessonProgressCard extends StatelessWidget {
               ),
             ),
           ),
-          const SizedBox(height: 8),
-          LinearPercentIndicator(
-            percent: .8,
-            lineHeight: 8.0,
-            isRTL: context.isRtl,
-            padding: EdgeInsets.zero,
-            barRadius: const Radius.circular(4),
-            progressColor: AppColors.primary700,
-            backgroundColor: Colors.grey.shade200,
+          SizedBox(height: 8),
+          PercentIndicator(
+            progress: 0.8,
+            // progressColor: AppColors.primary700,
           ),
-          const SizedBox(height: 16),
-          const Row(
+          SizedBox(height: 16),
+          Row(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

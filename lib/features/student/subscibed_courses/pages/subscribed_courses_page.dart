@@ -3,16 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:hamad/components/course/course_bookmark_btn.dart';
 import 'package:hamad/components/course/course_details_header.dart';
 import 'package:hamad/components/main/logo.dart';
+import 'package:hamad/components/ui/feature_grid.dart';
 import 'package:hamad/core/constants/images.dart';
 import 'package:hamad/core/router/app_routes.dart';
 import 'package:hamad/core/themes/app_colors.dart';
 
-import '../../../../components/ui/feature_grid.dart';
 import '../models/lesson_data.dart';
-import '../widgets/expandable_lesson_widget.dart';
-import '../widgets/lesson_progress_card.dart';
-import '../widgets/lesson_section.dart';
-import '../widgets/resource_list.dart';
+import '../widgets/widgets.dart';
 
 final List<FeatureModel> _features = <FeatureModel>[
   FeatureModel(
